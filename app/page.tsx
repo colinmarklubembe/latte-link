@@ -1,9 +1,8 @@
-import Image from "next/image";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import WhatsNew from "../components/WhatsNew";
 import ConnectAndThrive from "../components/ConnectAndThrive";
-import WhoIsLattelinkFor from "../components/WhoIsLatteLinkFor";
+import WhoIsLatteLinkFor from "../components/WhoIsLatteLinkFor";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -17,7 +16,7 @@ export default function Home() {
         <Hero />
         <WhatsNew />
         <ConnectAndThrive />
-        <WhoIsLattelinkFor />
+        <WhoIsLatteLinkFor />
       </main>
 
       {/* Footer */}

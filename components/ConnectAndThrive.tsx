@@ -1,85 +1,105 @@
 import Image from "next/image";
+import { FaSearch } from "react-icons/fa";
+import EventCard from "./EventCard";
 
 const ConnectAndThrive = () => {
-  return (
-    <section className="bg-gray-100 py-8">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-2xl font-bold text-center mb-4">
-          Connect and Thrive: Events That Matter
-        </h2>
-        <p className="text-center text-gray-600 mb-6">
-          Discover events that connect, inspire, and empower, from intimate
-          meetups to industry-changing conferences.
-        </p>
+  const events = [
+    {
+      title: "Start-Up Funding",
+      date: "12th Dec 202X",
+      price: "$50",
+      imageUrl: "https://placehold.co/300x200",
+    },
+    {
+      title: "Women in Tech",
+      date: "13th Dec 202X",
+      price: "$60",
+      imageUrl: "https://placehold.co/300x200",
+    },
+    {
+      title: "Healthcare Innovation Forum",
+      date: "14th Dec 202X",
+      price: "$40",
+      imageUrl: "https://placehold.co/300x200",
+    },
+    {
+      title: "Mastering Public Speaking",
+      date: "15th Dec 202X",
+      price: "$100",
+      imageUrl: "https://placehold.co/300x200",
+    },
+  ];
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
-          <select className="p-2 rounded-md bg-blue-100 border border-blue-200">
-            <option>Date: 12 - 15 Dec 202X</option>
-          </select>
-          <select className="p-2 rounded-md bg-blue-100 border border-blue-200">
-            <option>Format: In-Person</option>
-          </select>
-          <select className="p-2 rounded-md bg-blue-100 border border-blue-200">
-            <option>Location: Nairobi, Kenya</option>
-          </select>
-          <button className="bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700">
-            Search Event
-          </button>
+  return (
+    <section className="bg-gray-100 py-4">
+      <div className="max-w-6xl mx-auto px-2">
+        <div className="flex flex-col items-start">
+          <h2 className="text-6xl text-primary font-bold text-start mb-4">
+            <span className="block">Connect and Thrive:</span>
+            <span className="block">Events That Matter</span>
+          </h2>
+          <p className="text-lg text-start text-gray-600 mb-6">
+            <span className="block">
+              Discover events that connect, inspire, and empower, from
+            </span>
+            <span className="block">
+              intimate meetups to industry-changing conferences.
+            </span>
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-10 bg-secondary p-4 rounded-lg shadow-lg">
+          <div className="flex flex-col justify-between">
+            <label className="text-gray-500 text-base mb-2">Date</label>
+            <select className="p-3 rounded-md bg-secondaryLight text-primary text-semibold focus:outline-none w-auto min-w-[150px] max-w-[250px]">
+              <option>12 - 15 Dec 202X</option>
+              <option>16 - 18 Dec 202X</option>
+              <option>19 - 22 Dec 202X</option>
+              <option>23 - 25 Dec 202X</option>
+              <option>01 - 05 Jan 202Y</option>
+            </select>
+          </div>
+
+          <div className="flex flex-col justify-between">
+            <label className="text-gray-500 text-base mb-2">Format</label>
+            <select className="p-3 rounded-md bg-secondaryLight text-primary text-semibold focus:outline-none w-auto min-w-[150px] max-w-[250px]">
+              <option>In-Person</option>
+              <option>Virtual</option>
+              <option>Hybrid</option>
+            </select>
+          </div>
+
+          <div className="flex flex-col justify-between">
+            <label className="text-gray-500 text-base mb-2">Location</label>
+            <select className="p-3 rounded-md bg-secondaryLight text-primary text-semibold focus:outline-none w-auto min-w-[150px] max-w-[250px]">
+              <option>Nairobi, Kenya</option>
+              <option>New York, USA</option>
+              <option>London, UK</option>
+              <option>Toronto, Canada</option>
+              <option>Berlin, Germany</option>
+            </select>
+          </div>
+
+          <div className="flex flex-col justify-between">
+            <button className="bg-primary text-white p-3 flex items-center justify-center gap-3 text-base hover:bg-primaryLight focus:outline-none focus:ring-2 focus:ring-blue-500 flex-grow">
+              <FaSearch size={18} /> Search Event
+            </button>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {/* Event 1 */}
-          <div className="bg-white shadow-md rounded-lg p-4">
-            <Image
-              src="/funding.jpg"
-              alt="Start-Up Funding"
-              width={300}
-              height={200}
-              className="rounded-lg"
-            />
-            <h3 className="text-lg font-bold mt-4">Start-Up Funding</h3>
-            <p className="text-gray-600">$50 | 12th Dec 202X</p>
-          </div>
-          {/* Event 2 */}
-          <div className="bg-white shadow-md rounded-lg p-4">
-            <Image
-              src="/women-in-tech.jpg"
-              alt="Women in Tech"
-              width={300}
-              height={200}
-              className="rounded-lg"
-            />
-            <h3 className="text-lg font-bold mt-4">Women in Tech</h3>
-            <p className="text-gray-600">$60 | 13th Dec 202X</p>
-          </div>
-          {/* Event 3 */}
-          <div className="bg-white shadow-md rounded-lg p-4">
-            <Image
-              src="/healthcare.jpg"
-              alt="Healthcare Innovation Forum"
-              width={300}
-              height={200}
-              className="rounded-lg"
-            />
-            <h3 className="text-lg font-bold mt-4">
-              Healthcare Innovation Forum
-            </h3>
-            <p className="text-gray-600">$40 | 14th Dec 202X</p>
-          </div>
-          {/* Event 4 */}
-          <div className="bg-white shadow-md rounded-lg p-4">
-            <Image
-              src="/public-speaking.jpg"
-              alt="Mastering Public Speaking"
-              width={300}
-              height={200}
-              className="rounded-lg"
-            />
-            <h3 className="text-lg font-bold mt-4">
-              Mastering Public Speaking
-            </h3>
-            <p className="text-gray-600">$100 | 15th Dec 202X</p>
-          </div>
+          {events.map((event, index) => (
+            <div className="h-[350px]">
+              {" "}
+              <EventCard
+                key={index}
+                title={event.title}
+                date={event.date}
+                price={event.price}
+                imageUrl={event.imageUrl}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
