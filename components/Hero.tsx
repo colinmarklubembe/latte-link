@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { FaGoogle, FaEnvelope } from "react-icons/fa";
 

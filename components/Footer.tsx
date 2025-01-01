@@ -1,3 +1,5 @@
+"use client";
+
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Footer = () => {

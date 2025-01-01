@@ -1,4 +1,5 @@
-import Image from "next/image";
+"use client";
+
 import { FaSearch } from "react-icons/fa";
 import EventCard from "./EventCard";
 
@@ -89,10 +90,8 @@ const ConnectAndThrive = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {events.map((event, index) => (
-            <div className="h-[350px]">
-              {" "}
+            <div key={index} className="h-[350px]">
               <EventCard
-                key={index}
                 title={event.title}
                 date={event.date}
                 price={event.price}
