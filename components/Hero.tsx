@@ -6,7 +6,7 @@ import { FaGoogle, FaEnvelope } from "react-icons/fa";
 const Hero = () => {
   return (
     <section className="bg-[#023047] text-white py-8">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row  lg:items-start lg:px-0 px-2">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row  lg:items-start lg:px-0 px-2">
         {/* Left Side: Text and Buttons */}
         <div className="lg:w-1/2 space-y-5 text-left">
           <h1 className="text-4xl font-bold leading-tight">
