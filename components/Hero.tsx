@@ -17,14 +17,14 @@ const Hero = () => {
           </p>
           <div className="space-y-6">
             <button
-              className="flex items-center justify-center bg-[#8ECAE6] text-[#023047] text-lg px-8 py-4 rounded-full shadow-lg w-full hover:opacity-90 transition-all"
+              className="flex items-center justify-center bg-secondary text-primary text-lg px-8 py-4 rounded-full shadow-lg w-full hover:opacity-90 transition-all"
               style={{ maxWidth: "400px" }}
             >
               <FaGoogle className="mr-3" />
               Continue With Google
             </button>
             <button
-              className="flex items-center justify-center bg-[#8ECAE6] text-[#023047] text-lg px-8 py-4 rounded-full shadow-lg w-full hover:opacity-90 transition-all"
+              className="flex items-center justify-center bg-secondary text-primary text-lg px-8 py-4 rounded-full shadow-lg w-full hover:opacity-90 transition-all"
               style={{ maxWidth: "400px" }}
             >
               <FaEnvelope className="mr-3" />

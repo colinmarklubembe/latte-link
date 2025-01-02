@@ -23,13 +23,13 @@ const Header = () => {
           Events
         </Link>
         <Link
-          href="/join"
+          href="/auth/signup"
           className="px-4 py-2 bg-secondary hover:bg-secondaryDark text-primary hover:text-primaryLight rounded-full font-semibold"
         >
           Join Now
         </Link>
         <Link
-          href="/login"
+          href="/auth/login"
           className="px-4 py-2 bg-primary hover:bg-primaryLight text-white font-semibold rounded-full"
         >
           Log In

@@ -32,7 +32,7 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-50">
+    <div className="flex items-center justify-center min-h-screen bg-white">
       <div className="bg-gray-100 p-10 rounded-3xl shadow-lg max-w-6xl border-2 border-primary w-full flex flex-col items-center">
         <h2 className="text-4xl font-bold text-primary text-center mb-6">
           Join LatteLink
@@ -137,7 +137,7 @@ const SignupPage = () => {
                 <p className="text-sm">
                   Already have an account?{" "}
                   <a
-                    href="/login"
+                    href="/auth/login"
                     className="text-primary font-semibold underline"
                   >
                     Login here
@@ -158,7 +158,7 @@ const SignupPage = () => {
                   type="button"
                   className="w-full px-8 py-3 bg-white border border-primary text-primary rounded-full flex items-center justify-center space-x-3 hover:bg-secondaryLight"
                 >
-                  <FaGoogle />
+                  <FaGoogle size={30} />
                   <span>Sign up with Google</span>
                 </button>
               </div>

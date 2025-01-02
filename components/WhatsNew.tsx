@@ -79,18 +79,20 @@ const WhatsNew = () => {
                   ))}
                 </div>
 
-                {showMoreBuild && (
-                  <div className="grid grid-cols-3 gap-4 mt-4 transition-all">
-                    {buildItems.slice(3).map((item, index) => (
-                      <span
-                        key={index + 3}
-                        className="bg-white border border-primary px-6 py-3 rounded-full text-lg text-center"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                <div
+                  className={`grid grid-cols-3 gap-4 mt-4 overflow-hidden transition-all duration-500 ${
+                    showMoreBuild ? "max-h-[200px]" : "max-h-0"
+                  }`}
+                >
+                  {buildItems.slice(3).map((item, index) => (
+                    <span
+                      key={index + 3}
+                      className="bg-white border border-primary px-6 py-3 rounded-full text-lg text-center"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
 
                 <div className="grid grid-cols-3 mt-4">
                   <div className="col-span-3 flex justify-center">
@@ -132,18 +134,20 @@ const WhatsNew = () => {
                   ))}
                 </div>
 
-                {showMoreRead && (
-                  <div className="grid grid-cols-3 gap-4 mt-4 transition-all">
-                    {readItems.slice(3).map((item, index) => (
-                      <span
-                        key={index + 3}
-                        className="bg-white border border-primary px-6 py-3 rounded-full text-lg text-center"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                <div
+                  className={`grid grid-cols-3 gap-4 mt-4 overflow-hidden transition-all duration-500 ${
+                    showMoreRead ? "max-h-[200px]" : "max-h-0"
+                  }`}
+                >
+                  {readItems.slice(3).map((item, index) => (
+                    <span
+                      key={index + 3}
+                      className="bg-white border border-primary px-6 py-3 rounded-full text-lg text-center"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
 
                 <div className="grid grid-cols-3 mt-4">
                   <div className="col-span-3 flex justify-center">
